@@ -3,10 +3,11 @@
 name: Hello
 
 on:
+  push:
 
 # Jobs
-# should be inside workflow 
-# job teels wht  workflow does do
+# should be inside workflow
+# job tells what workflow does
 jobs:
   say-hello:
     runs-on: ubuntu-latest
