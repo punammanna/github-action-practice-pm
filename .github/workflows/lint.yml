@@ -1,13 +1,18 @@
-name: Auto reviwer
+
+name: Auto Reviewer
 
 on:
   push:
-   paths: "*.py"
+    paths:
+      - "*.py"
 
 jobs:
   code:
     runs-on: ubuntu-latest
+
     steps:
-      - name: clone code 
-        uses: actions/checkout@v7
-  
+      - name: Clone code
+        uses: actions/checkout@v4
+
+      - name: Install linter
+        run: pip install ruff
