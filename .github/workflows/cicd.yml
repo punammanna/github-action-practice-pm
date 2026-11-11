@@ -1,3 +1,4 @@
+
 name: CI/CD
 
 on:
@@ -11,18 +12,21 @@ jobs:
         run: echo "Cloning code from Git"
 
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Build using Docker
         run: echo "Building using Docker"
 
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Run test cases
         run: echo "Testing the code"
 
   deploy:
+    needs: [test, build]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the application
