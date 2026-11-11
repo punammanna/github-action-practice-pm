@@ -14,5 +14,10 @@ jobs:
       - name: Clone code
         uses: actions/checkout@v4
 
+      # Check all files in the current folder
       - name: Install linter
         run: pip install ruff
+
+      # Run the linter
+      - name: Check the file for linting
+        run: ruff check .
