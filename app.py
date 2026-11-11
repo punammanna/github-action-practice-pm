@@ -1,7 +1,5 @@
 
-total_marks = int(input("Enter total marks: "))
-obtained_marks = int(input("Enter obtained marks: "))
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-percentage = (obtained_marks / total_marks) * 100
-
-print("Percentage:", percentage, "%")
+for day in days:
+    print(day)
